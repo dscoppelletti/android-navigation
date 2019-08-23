@@ -12,6 +12,10 @@
   ~ limitations under the License.
   -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- DOC STEP 9
+    Here are two items for the bottom navigation and that their ids match the
+    destinations of navigation graph destinations
+    DOC END STEP 9-->
     <item
         android:id="@id/home_dest"
         android:icon="@drawable/ic_home"

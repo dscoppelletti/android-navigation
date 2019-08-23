@@ -22,6 +22,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.codelabs.navigation.MainActivity">
 
+    <!-- DOC STEP 9
+    The layout contains a NavigationView connected to nav_drawer_menu: this is
+    the tablet version (w960dp) and the NavigationView is always on screen.
+    DOC END STEP 9 -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

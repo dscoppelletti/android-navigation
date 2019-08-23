@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <EditText
+    <EditText tools:ignore="Autofill,TextFields"
         android:id="@+id/args_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

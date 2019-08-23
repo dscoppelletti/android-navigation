@@ -11,24 +11,77 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+
+<!-- DOC STEP 3
+<navigation>
+The root node of every navigation graph.
+A navigation graph is a new resource type that defines all the possible paths a
+user can take through an app.
+
+app:startDestination="@+id/home_dest"
+Specifies the destination that is launched by default when the user first opens
+the app.
+DOC END STEP 3 -->
+
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@+id/home_dest">
+
+    <!-- DOC STEP 3
+    <fragment>, <activity>
+    A destination.
+    A destination is any place you can navigate to in your app, usually a
+    fragment or an activity.
+
+    android:id="@+id/home_dest"
+    Defines an ID for the fragment that you can use to reference the destination
+    elsewhere in this XML and your code.
+
+    android:name="com.example.android.codelabs.navigation.HomeFragment"
+    Declares the fully qualified class name of the fragment to instantiate when
+    you navigate to that destination.
+
+    tools:layout="@layout/home_fragment"
+    Specifies what layout should be shown in the graphical editor.
+    DOC END STEP 3 -->
+
     <fragment
         android:id="@+id/home_dest"
         android:name="com.example.android.codelabs.navigation.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/home_fragment">
 
+        <!-- DOC STEP 7
+        The navigation system also allows you to navigate via actions.
+
+        Navigation by actions has the following benefits over navigation by
+        destination:
+
+        . You can visualize the navigation paths through your app
+        . Actions can contain additional associated attributes you can set, such
+        as a transition animation, arguments values, and backstack behavior
+        . You can use the plugin safe args to navigate
+
+        <action>
+        The actions are nested within the destination - this is the destination
+        you will navigate from.
+
+        android:id="@+id/next_action"
+        The ID for the action.
+
+        app:destination="@+id/flow_step_one_dest"
+        The ID of where you will navigate to.
+        DOC END STEP 7 -->
+
         <!-- TODO STEP 7.1 - Add action with transitions -->
-        <!--<action-->
-            <!--android:id="@+id/next_action"-->
-            <!--app:destination="@+id/flow_step_one_dest"-->
-            <!--app:enterAnim="@anim/slide_in_right"-->
-            <!--app:exitAnim="@anim/slide_out_left"-->
-            <!--app:popEnterAnim="@anim/slide_in_left"-->
-            <!--app:popExitAnim="@anim/slide_out_right" />-->
+        <action
+            android:id="@+id/next_action"
+            app:destination="@+id/flow_step_one_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <!-- TODO END STEP 7.1 -->
 
     </fragment>
@@ -37,6 +90,20 @@
         android:id="@+id/flow_step_one_dest"
         android:name="com.example.android.codelabs.navigation.FlowStepFragment"
         tools:layout="@layout/flow_step_one_fragment">
+
+        <!-- DOC STEP 8
+        <argument>
+        Safeargs generates a class called FlowStepFragmentArgs.
+
+        android:name="flowStepNumber"
+        The generated class FlowStepFragmentArgs will include a variable
+        flowStepNumber with getters and setters.
+
+        android:defaultValue="1"
+        The default value for the argument.
+        If you don't provide then you must pass the argument into the action.
+        DOC END STEP 8 -->
+
         <argument
             android:name="flowStepNumber"
             app:argType="integer"
@@ -58,6 +125,19 @@
             app:argType="integer"
             android:defaultValue="2"/>
 
+        <!-- DOC STEP 7
+        android:id="@+id/next_action"
+        The same ID next_action is used for the action connecting
+        flow_step_two_dest to home_dest. You can navigate using the next_action
+        id from either flow_step_one_dest or flow_step_two_dest. This is an
+        example of how actions can provide a level of abstraction and can
+        navigate you somewhere different depending on context.
+
+        app:popUpTo="@id/home_dest"
+        This action will pop fragments off of the back-stack until you reach
+        home_dest.
+        DOC END STEP 7 -->
+
         <action
             android:id="@+id/next_action"
             app:popUpTo="@id/home_dest">
@@ -65,11 +145,11 @@
     </fragment>
 
     <!-- TODO STEP 4 Create a new navigation destination pointing to SettingsFragment -->
-    <!--<fragment-->
-        <!--android:id="@+id/settings_dest"-->
-        <!--android:name="com.example.android.codelabs.navigation.SettingsFragment"-->
-        <!--android:label="@string/settings"-->
-        <!--tools:layout="@layout/settings_fragment" />-->
+    <fragment
+        android:id="@+id/settings_dest"
+        android:name="com.example.android.codelabs.navigation.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/settings_fragment" />
     <!-- TODO END STEP 4 -->
 
     <fragment
@@ -81,10 +161,54 @@
         <argument
             android:name="myarg"
             android:defaultValue="Android!"/>
-        <!-- TODO STEP 12.1 - Add a deep link to www.example.com/{myarg}/ -->
 
-        <!--<deepLink app:uri="www.example.com/{myarg}" />-->
+        <!-- DOC STEP 11
+        One of the most common uses of a deep link is to allow a web link to
+        open an activity in your app. Traditionally you would use an
+        intent-filter and associate a URL with the activity you want to open.
 
-        <!-- TODO END STEP 12.1 -->
+        The navigation library makes this extremely simple and allows you to map
+        URLs directly to destinations in your navigation graph.
+
+        <deepLink> is an element you can add to a destination in your graph.
+        Each <deepLink> element has a single required attribute: app:uri.
+
+        In addition to a direct URI match, the following features are supported:
+
+        . URIs without a scheme are assumed to be http and https. For example,
+        www.example.com will match http://www.example.com and
+        https://www.example.com.
+        . You can use placeholders in the form of {placeholder_name} to match
+        one or more characters. The String value of the placeholder is available
+        in the arguments Bundle which has a key of the same name. For example,
+        http://www.example.com/users/{id} will match
+        http://www.example.com/users/4.
+        . You can use the .* wildcard to match zero or more characters.
+        . NavController will automatically handle ACTION_VIEW intents and look
+        for matching deep links.
+
+        There are two ways to launch your app using a deep link:
+
+        . Use adb:
+
+        $ adb shell am start -a android.intent.action.VIEW \
+        > -d "http://www.example.com/urlTest"
+
+        . Navigate via the Google app. You should be able to put
+        www.example.com/urlTest in the search bar and the disambiguation window
+        will appear: select Navigation codelab.
+        DOC END STEP 11 -->
+
+        <!-- TODO STEP 11.1 - Add a deep link to www.example.com/{myarg}/ -->
+        <deepLink app:uri="www.example.com/{myarg}" />
+        <!-- TODO END STEP 11.1 -->
     </fragment>
+
+    <!-- TODO STEP 12 - Add the fragment as a destination to your navigation graph -->
+    <fragment
+        android:id="@+id/shopping_dest"
+        android:name="com.example.android.codelabs.navigation.ShoppingFragment"
+        android:label="@string/shopping_cart"
+        tools:layout="@layout/shopping_fragment" />
+    <!-- TODO END STEP 12 -->
 </navigation>

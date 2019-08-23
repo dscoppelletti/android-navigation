@@ -11,6 +11,12 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+
+<!-- DOC STEP 5
+The Principles of Navigation recommend you use activities as entry points for
+your app.
+The Activity contains everything.
+DOC END STEP 5 -->
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -32,6 +38,17 @@
             android:background="@color/colorPrimary"
             android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
 
+        <!-- DOC STEP 5
+        Fragments will be the actual destination-specific layouts.
+
+        NavHostFragment is container for different fragment destinations.
+
+        app:defaultNavHost="true"
+        Connects the system back button
+
+        app:navGraph="@navigation/mobile_navigation"
+        Associates the navigation graph
+        DOC END STEP 5 -->
         <fragment
             android:id="@+id/my_nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
@@ -41,6 +58,13 @@
             app:navGraph="@navigation/mobile_navigation" />
     </LinearLayout>
 
+    <!-- DOC STEP 5
+    Activities will also contain global navigation
+    DOC END STEP 5 -->
+    <!-- DOC STEP 9
+    The layout contains a NavigationView connected to nav_drawer_menu and nested
+    within a DrawerLayout.
+    DOC END STEP 9 -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

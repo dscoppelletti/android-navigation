@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+@file:Suppress("MoveVariableDeclarationIntoWhen")
+
 package com.example.android.codelabs.navigation
 
 import android.os.Bundle
@@ -22,6 +24,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.navArgs
 
 /**
  * Presents how multiple steps flow could be implemented.
@@ -35,11 +38,19 @@ class FlowStepFragment : Fragment() {
     ): View? {
         setHasOptionsMenu(true)
 
-        val flowStepNumber = arguments?.getInt("flowStepNumber")
+        /* DOC STEP 8
+        This old-style code is not type-safe. It's better to use safe args.
+        DOC END STEP 8 */
+
+        // val flowStepNumber = arguments?.getInt("flowStepNumber")
+
+        /* DOC STEP 8
+        This will get the FlowStepFragment arguments in a type-safe manner.
+        DOC END STEP 8 */
 
         // TODO STEP 8 - Use type-safe arguments - remove previous line!
-//        val safeArgs: FlowStepFragmentArgs by navArgs()
-//        val flowStepNumber = safeArgs.flowStepNumber
+        val safeArgs: FlowStepFragmentArgs by navArgs()
+        val flowStepNumber = safeArgs.flowStepNumber
         // TODO END STEP 8
 
         return when (flowStepNumber) {

@@ -16,6 +16,22 @@
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+
+/* DOC STEP 8
+Safe args allows you to get rid of code like this when passing values between
+destinations:
+
+    val username = arguments?.getString("usernameKey")
+
+And, instead, replace it with code that has generated setters and getters.
+
+    val username = args.username
+
+Because of its type safety, navigation using safe args generated classes
+is the preferred way to navigate by action and to pass arguments during
+navigation.
+DOC END STEP 8 */
+
 apply plugin: 'androidx.navigation.safeargs.kotlin'
 
 android {
@@ -39,9 +55,9 @@ android {
             testCoverageEnabled false
         }
     }
-    dataBinding {
-        enabled = true
-    }
+//    dataBinding {
+//        enabled = true
+//    }
     productFlavors {
     }
 

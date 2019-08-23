@@ -14,6 +14,15 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+
+<!-- DOC STEP 9
+This layout will be used on phones in portrait mode: it does not include the
+navigation drawer and instead includes the bottom navigation, which is why you
+should open the app in split screen to see the navigation drawer. The reason
+there is not a layout with both a navigation drawer and bottom navigation is
+because Material Design guidelines cautions against this.
+DOC END STEP 9 -->
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -39,6 +48,10 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/mobile_navigation" />
 
+    <!-- DOC STEP 9
+    The XML layout code for bottom navigation is there and refers to
+    bottom_nav_menu.xml
+    DOC END STEP 9 -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_view"
         android:layout_width="match_parent"
