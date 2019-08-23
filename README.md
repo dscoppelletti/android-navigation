@@ -7,58 +7,58 @@ Lab path
 
 ### 3. Introducing the Navigation Graph
 
-1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/navigation/mobile_navigation.xml)
+1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/navigation/mobile_navigation.xml)
 
 ### 4. Add a Destination to the Navigation Graph
 
-1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/navigation/mobile_navigation.xml)
+1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/navigation/mobile_navigation.xml)
 
 ### 5. Using the Navigation Graph to Navigate
 
-1. [navigation_activity.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/layout/navigation_activity.xml)
-1. [HomeFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/java/com/example/android/codelabs/navigation/HomeFragment.kt)
+1. [navigation_activity.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/layout/navigation_activity.xml)
+1. [HomeFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/java/com/example/android/codelabs/navigation/HomeFragment.kt)
 
 ### 6. Changing the Navigation Transition
 
-1. [HomeFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/java/com/example/android/codelabs/navigation/HomeFragment.kt)
+1. [HomeFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/java/com/example/android/codelabs/navigation/HomeFragment.kt)
 
 ### 7. Navigate using actions
 
-1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/navigation/mobile_navigation.xml)
-1. [HomeFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/java/com/example/android/codelabs/navigation/HomeFragment.kt)
+1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/navigation/mobile_navigation.xml)
+1. [HomeFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/java/com/example/android/codelabs/navigation/HomeFragment.kt)
 
 ### 8. Using safe args for navigation
 
-1. [build.gradle (project)](http://github.com/dscoppelletti/android-navigation/blob/master/build.gradle)
-1. [build.gradle (app)](http://github.com/dscoppelletti/android-navigation/blob/master/app/build.gradle)
-1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/navigation/mobile_navigation.xml)
-1. [FlowStepFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/java/com/example/android/codelabs/navigation/FlowStepFragment.kt)
-1. [HomeFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/java/com/example/android/codelabs/navigation/HomeFragment.kt)
+1. [build.gradle (project)](http://github.com/dscoppelletti/android-navigation/blob/attend/build.gradle)
+1. [build.gradle (app)](http://github.com/dscoppelletti/android-navigation/blob/attend/app/build.gradle)
+1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/navigation/mobile_navigation.xml)
+1. [FlowStepFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/java/com/example/android/codelabs/navigation/FlowStepFragment.kt)
+1. [HomeFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/java/com/example/android/codelabs/navigation/HomeFragment.kt)
 
 ### 9. Navigating using menus, drawers and bottom navigation
 
-1. [overflow_menu.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/menu/overflow_menu.xml)
-1. [navigation_activity.xml (h470dp)](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/layout-h470dp/navigation_activity.xml)
-1. [bottom_nav_menu.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/menu/bottom_nav_menu.xml)
-1. [navigation_activity.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/layout/navigation_activity.xml)
-1. [navigation_activity.xml (w960dp)](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/layout-w960dp/navigation_activity.xml)
-1. [nav_drawer_menu.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/menu/nav_drawer_menu.xml)
-1. [MainActivity.kt](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/java/com/example/android/codelabs/navigation/MainActivity.kt)
+1. [overflow_menu.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/menu/overflow_menu.xml)
+1. [navigation_activity.xml (h470dp)](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/layout-h470dp/navigation_activity.xml)
+1. [bottom_nav_menu.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/menu/bottom_nav_menu.xml)
+1. [navigation_activity.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/layout/navigation_activity.xml)
+1. [navigation_activity.xml (w960dp)](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/layout-w960dp/navigation_activity.xml)
+1. [nav_drawer_menu.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/menu/nav_drawer_menu.xml)
+1. [MainActivity.kt](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/java/com/example/android/codelabs/navigation/MainActivity.kt)
 
 ### 10. Deep Linking to a destination
 
-1. [DeepLinkAppWidgetProvider.kt](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/java/com/example/android/codelabs/navigation/DeepLinkAppWidgetProvider.kt)
+1. [DeepLinkAppWidgetProvider.kt](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/java/com/example/android/codelabs/navigation/DeepLinkAppWidgetProvider.kt)
 
 ### 11. Associating a web link with a destination
 
-1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/navigation/mobile_navigation.xml)
-1. [AndroidManifest.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/AndroidManifest.xml)
+1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/navigation/mobile_navigation.xml)
+1. [AndroidManifest.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/AndroidManifest.xml)
 
 ### 12. Try navigating on your own
 
-1. [ShoppingFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/java/com/example/android/codelabs/navigation/ShoppingFragment.kt)
-1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/res/navigation/mobile_navigation.xml)
-1. [HomeFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/master/app/src/main/java/com/example/android/codelabs/navigation/HomeFragment.kt)
+1. [ShoppingFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/java/com/example/android/codelabs/navigation/ShoppingFragment.kt)
+1. [mobile_navigation.xml](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/res/navigation/mobile_navigation.xml)
+1. [HomeFragment.kt](http://github.com/dscoppelletti/android-navigation/blob/attend/app/src/main/java/com/example/android/codelabs/navigation/HomeFragment.kt)
 
 References
 ----------
